@@ -1,29 +1,18 @@
-# js-written-number
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yamadapc/js-written-number?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Build Status](https://secure.travis-ci.org/yamadapc/js-written-number.png?branch=master)](http://travis-ci.org/yamadapc/js-written-number)
-[![Code Climate](https://codeclimate.com/github/yamadapc/js-written-number.png)](https://codeclimate.com/github/yamadapc/js-written-number)
-[![Coverage Status](https://coveralls.io/repos/yamadapc/js-written-number/badge.png?branch=master)](https://coveralls.io/r/yamadapc/js-written-number?branch=master)
-[![Dependency Status](https://david-dm.org/yamadapc/js-written-number.png)](https://david-dm.org/yamadapc/js-written-number)
-[![devDependency Status](https://david-dm.org/yamadapc/js-written-number/dev-status.png)](https://david-dm.org/yamadapc/js-written-number#info=devDependencies)
-[![Analytics](https://ga-beacon.appspot.com/UA-54450544-1/js-written-number/README)](https://github.com/igrigorik/ga-beacon)
-[![npm downloads per month](http://img.shields.io/npm/dm/written-number.svg)](https://www.npmjs.org/package/written-number)
-[![npm version](https://img.shields.io/npm/v/written-number.svg)](https://www.npmjs.org/package/written-number)
-- - -
 Convert numbers to words - their written form.
 
 ## Install
 With npm:
 ```bash
-npm install --save written-number
+npm install --save written-number-js
 ```
 With bower:
 ```bash
-bower install written-number
+bower install written-number-js
 ```
 
 ## Usage
 ```javascript
-var writtenNumber = require('written-number');
+var writtenNumber = require('written-number-js');
 writtenNumber(1234); // => 'one thousand two hundred and thirty-four'
 
 writtenNumber.defaults.lang = 'es';
@@ -38,6 +27,7 @@ writtenNumber(1234, {lang: 'eo'});   // => 'mil ducent tridek kvar'
 writtenNumber(1234, {lang: 'vi'});   // => 'một ngàn hai trăm và ba mươi bốn'
 writtenNumber(1234, {lang: 'uk'});   // => 'одна тисяча двісті тридцять чотири'
 writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
+writtenNumber(1234, {lang: 'ku'});   // => 'هەزار و دوو سەد و سی و چوار'
 ```
 
 ## Options
@@ -49,22 +39,23 @@ writtenNumber(1234, {lang: 'id'});   // => 'seribu dua ratus tiga puluh empat'
 
 Currently supported languages are:
 
-| Language | `lang` |
-|---------|--------|
-| English | `en` |
-| Portuguese (Brazil) | `pt` |
-| Portuguese (Portugal) | `ptPT` |
-| Spanish | `es` |
-| French | `fr` |
-| Esperanto | `eo` |
-| Vietnamese | `vi` |
-| Arabic | `ar` |
-| Azerbaijan | `az` |
-| Turkish | `tr` |
-| English (Indian) | `enIndian` |
-| Ukrainian | `uk` |
-| Indonesian | `id` |
-| Russian | `ru` |
+| Language              | `lang`     |
+|-----------------------|------------|
+| English               | `en`       |
+| Portuguese (Brazil)   | `pt`       |
+| Portuguese (Portugal) | `ptPT`     |
+| Spanish               | `es`       |
+| French                | `fr`       |
+| Esperanto             | `eo`       |
+| Vietnamese            | `vi`       |
+| Arabic                | `ar`       |
+| Azerbaijan            | `az`       |
+| Turkish               | `tr`       |
+| English (Indian)      | `enIndian` |
+| Ukrainian             | `uk`       |
+| Indonesian            | `id`       |
+| Russian               | `ru`       |
+| Kurdish               | `ku`       |
 
 
 ## Contributing
@@ -112,11 +103,3 @@ A `unit` can be:
 | `useSingularEnding`    | Use singular form for numbers ending with 1.                                                           | `uk`              |
 | `useFewEnding`         | Use _few_ form for numbers ending with 2, 3 or 4.                                                      | `uk`              |
 | `avoidEndingRules`     | Plural form used instead of `useSingularEnding` and `useFewEnding`                                     | `uk`              |
-
-
-
-### Versioning
-Do your changes and submit a PR. If you've write access and want to bump the version, run `mversion [major|minor|patch] -m`. That'll bump both `bower.json` and `package.json`.
-
-## License
-This code is licensed under the MIT license for Pedro Tacla Yamada. For more information, please refer to the [LICENSE](/LICENSE) file.

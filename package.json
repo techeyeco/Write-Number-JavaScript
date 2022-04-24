@@ -47,7 +47,7 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "written-number",
+  "name": "written-number-js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techeyeco/written-number-js.git"
